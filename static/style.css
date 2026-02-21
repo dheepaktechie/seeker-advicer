@@ -1,0 +1,399 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f9fafc, #eef2ff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+.nav-btn {
+    text-decoration: none;
+    padding: 8px 18px;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* ================= HERO (INDEX PAGE) ================= */
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.blue {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+}
+
+.green {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ================= SECTION STRUCTURE ================= */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section.light {
+    background: #f8fafc;
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 40px;
+    color: #1e3a8a;
+}
+
+/* ================= FEATURE CARDS ================= */
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    width: 280px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+    color: #1e3a8a;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ================= SEEKER PAGE ================= */
+.impact-hero {
+    padding: 70px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+}
+
+.impact-hero h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+/* SEEKER FORM */
+.impact-form-container {
+    max-width: 650px;
+    width: 90%;
+    margin: 40px auto 70px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+}
+
+.form-section {
+    margin-bottom: 25px;
+}
+
+.form-section h3 {
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    font-size: 18px;
+}
+
+.impact-form-container input,
+.impact-form-container select,
+.impact-form-container textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    background: #fafafa;
+    transition: 0.3s ease;
+}
+
+.impact-form-container textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.impact-form-container input:focus,
+.impact-form-container select:focus,
+.impact-form-container textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 8px rgba(37,99,235,0.15);
+}
+
+.full {
+    width: 100%;
+}
+
+/* ================= TRUST SECTION ================= */
+.trust-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #eef2ff;
+}
+
+.trust-section h2 {
+    margin-bottom: 12px;
+    color: #1e3a8a;
+    font-size: 22px;
+}
+
+.trust-section p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ================= EXPERT DASHBOARD ================= */
+.dashboard {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.dashboard h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* PROFILE */
+.profile-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.domain-tags span {
+    display: inline-block;
+    background: #eef2ff;
+    color: #1e3a8a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin: 5px 5px 0 0;
+    font-weight: 500;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 220px;
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-box h3 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+    font-size: 16px;
+}
+
+.big {
+    font-size: 28px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* CASE CARDS */
+.case-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.case-card:hover {
+    background: #eef2ff;
+}
+
+.risk {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.high {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.medium {
+    background: #fef9c3;
+    color: #a16207;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .impact-hero h1 {
+        font-size: 24px;
+    }
+
+    .profile-grid {
+        flex-direction: column;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .case-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .impact-form-container {
+        padding: 25px;
+        max-width: 95%;
+    }
+}

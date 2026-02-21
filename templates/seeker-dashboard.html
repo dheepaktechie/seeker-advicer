@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skillrex | Decision Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2 class="logo">Skillrex</h2>
+    <a href="{{ url_for('home') }}" class="nav-btn">Home</a>
+</header>
+
+<section class="impact-hero">
+    <h1>Submit Your Strategic Challenge</h1>
+</section>
+
+<div class="impact-form-container">
+
+    <form method="POST">
+
+        <div class="form-section">
+            <h3>Basic Information</h3>
+
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+
+            <select name="role" required>
+                <option value="">Select Role</option>
+                <option>Startup Founder</option>
+                <option>Product Manager</option>
+                <option>Engineer</option>
+                <option>Student</option>
+            </select>
+        </div>
+
+        <div class="form-section">
+            <h3>Challenge Details</h3>
+
+            <select name="domain" required>
+                <option value="">Select Domain</option>
+                <option>Technology</option>
+                <option>Healthcare</option>
+                <option>Finance</option>
+                <option>Public Policy</option>
+            </select>
+
+            <textarea name="challenge"
+                placeholder="Describe your challenge..."
+                rows="5"
+                required></textarea>
+        </div>
+
+        <div class="form-section">
+            <label>Urgency</label>
+            <select name="urgency" required>
+                <option>Low</option>
+                <option>Moderate</option>
+                <option>High</option>
+                <option>Critical</option>
+            </select>
+
+            <label>Implementation Risk</label>
+            <select name="risk" required>
+                <option>Low Risk</option>
+                <option>Manageable Risk</option>
+                <option>High Risk</option>
+                <option>Extreme Risk</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn blue full">
+            Get Analysis
+        </button>
+
+    </form>
+</div>
+
+
+{% if ai_output %}
+
+<section class="card" style="max-width:800px;margin:40px auto;">
+
+    <h2>Decision Analysis Report</h2>
+
+    <p><strong>Name:</strong> {{ ai_output.name }}</p>
+    <p><strong>Email:</strong> {{ ai_output.email }}</p>
+    <p><strong>Role:</strong> {{ ai_output.role }}</p>
+
+    <hr>
+
+    <p><strong>Domain:</strong> {{ ai_output.domain_category }}</p>
+    <p><strong>Challenge:</strong> {{ ai_output.challenge }}</p>
+    <p><strong>Complexity:</strong> {{ ai_output.complexity_level }}</p>
+    <p><strong>Recommended Expert:</strong> {{ ai_output.recommended_expert }}</p>
+    <p><strong>Success Metrics:</strong> {{ ai_output.success_metrics }}</p>
+
+    <h3>Risk Score: {{ ai_output.risk_score }}%</h3>
+
+    <canvas id="riskChart"></canvas>
+
+</section>
+
+<script>
+const ctx = document.getElementById('riskChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Risk Score'],
+        datasets: [{
+            label: 'Risk Level',
+            data: [{{ ai_output.risk_score }}],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+</script>
+
+{% endif %}
+
+</body>
+</html>

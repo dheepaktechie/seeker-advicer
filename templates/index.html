@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skillrex | AI Decision Risk Network</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <h2 class="logo">Skillrex</h2>
+    <a href="{{ url_for('expert_login') }}" class="nav-btn">Expert Login</a>
+</header>
+
+<section class="hero">
+    <div class="hero-container">
+        <h1>AI-Powered Cognitive Insurance for Critical Decisions</h1>
+
+        <p>
+            Skillrex builds a distributed intelligence layer that evaluates 
+            strategic decisions before execution. Detect hidden risks,
+            fragile assumptions, and prevent costly failures.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('seeker_dashboard') }}" class="btn blue">
+                Analyze My Decision
+            </a>
+            <a href="{{ url_for('expert_login') }}" class="btn green">
+                Join as Risk Expert
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2 class="section-title">The Problem</h2>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>Hidden Decision Risks</h3>
+            <p>Strategic failures often arise from overlooked variables and fragile assumptions.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Limited Perspectives</h3>
+            <p>Small internal teams increase blind spots and systemic bias.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>No Risk Validation</h3>
+            <p>Traditional advisory platforms provide opinions, not structured fragility assessment.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section light">
+    <h2 class="section-title">How Skillrex Works</h2>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>AI Structuring</h3>
+            <p>Your decision is decomposed and analyzed using AI-powered risk modeling.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Collaborative Review</h3>
+            <p>Experienced professionals independently evaluate risks anonymously.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Fragility Report</h3>
+            <p>AI aggregates recurring warnings and generates a Decision Fragility Score.</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    © 2026 Skillrex | Cognitive Risk Intelligence Platform
+</footer>
+
+</body>
+</html>

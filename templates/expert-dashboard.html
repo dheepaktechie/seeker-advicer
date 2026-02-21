@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expert Dashboard | Skillrex</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>Expert Risk Intelligence Dashboard</h1>
+    <p class="subtitle">
+        Contribute your expertise to strengthen collective decision resilience.
+    </p>
+
+    <!-- PROFILE CARD -->
+    <div class="card profile-card">
+        <h2>Expert Profile</h2>
+
+        <div class="profile-grid">
+            <div>
+                <p><strong>Name:</strong> John Expert</p>
+                <p><strong>Experience:</strong> 8 Years</p>
+                <p><strong>Languages:</strong> English / Tamil</p>
+            </div>
+
+            <div>
+                <p><strong>Primary Domains:</strong></p>
+                <div class="domain-tags">
+                    <span>AI Strategy</span>
+                    <span>Startup Scaling</span>
+                    <span>Risk Modeling</span>
+                    <span>Technology Architecture</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PERFORMANCE STATS -->
+    <div class="stats">
+
+        <div class="stat-box">
+            <h3>Resilience Credits</h3>
+            <p class="big" id="credits">120</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Risk Alerts Contributed</h3>
+            <p class="big" id="alerts">45</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Reports Participated</h3>
+            <p class="big" id="reports">18</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>Validated Reductions</h3>
+            <p class="big" id="validated">12</p>
+        </div>
+
+    </div>
+
+    <!-- DECISION CASES -->
+    <div class="card">
+        <h2>Available Decision Evaluations</h2>
+
+        <div class="case-card">
+            <div>
+                <p><strong>Case ID:</strong> #CRN-4821</p>
+                <p><strong>Domain:</strong> AI Product Launch</p>
+                <p><strong>Risk Level:</strong> <span class="risk high">High</span></p>
+            </div>
+            <button class="btn green" onclick="submitAnalysis()">Contribute</button>
+        </div>
+
+        <div class="case-card">
+            <div>
+                <p><strong>Case ID:</strong> #CRN-4892</p>
+                <p><strong>Domain:</strong> Manufacturing Expansion</p>
+                <p><strong>Risk Level:</strong> <span class="risk medium">Medium</span></p>
+            </div>
+            <button class="btn green" onclick="submitAnalysis()">Contribute</button>
+        </div>
+
+    </div>
+
+    <!-- NETWORK IMPACT -->
+    <div class="card impact-summary">
+        <h2>Collective Network Impact</h2>
+        <p>
+            In the last quarter, collaborative evaluations prevented 
+            9 strategic failures and reduced projected financial exposure by 21%.
+        </p>
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="{{ url_for('logout') }}" class="btn blue">Logout</a>
+    </div>
+
+</div>
+
+
+<script>
+function submitAnalysis() {
+
+    let credits = document.getElementById("credits");
+    let alerts = document.getElementById("alerts");
+    let reports = document.getElementById("reports");
+
+    credits.innerText = parseInt(credits.innerText) + 5;
+    alerts.innerText = parseInt(alerts.innerText) + 1;
+    reports.innerText = parseInt(reports.innerText) + 1;
+
+    alert("Analysis submitted successfully! Credits updated.");
+}
+</script>
+
+</body>
+</html>

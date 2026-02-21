@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Decision Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>AI Decision Fragility Report</h1>
+
+    <div class="card">
+        <div style="white-space: pre-wrap;">
+            {{ report }}
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="{{ url_for('seeker_dashboard') }}" class="btn blue">
+            Analyze Another Decision
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
